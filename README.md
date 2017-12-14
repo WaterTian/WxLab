@@ -34,6 +34,8 @@
     $signPackage = json_decode(file_get_contents("http://cdn.180china.com/WxLab/lib/getSignPackage.php?path=$url"),true);
 ?>
 
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script>
     var user_info=
     {
@@ -43,6 +45,22 @@
         "sex":"<?php echo $wx_info["sex"];?>",
         "city":"<?php echo $wx_info["city"];?>"
     }
+    
+    wx.config({
+      debug: false,
+      appId: '<?php echo $signPackage["appId"];?>',
+      timestamp: <?php echo $signPackage["timestamp"];?>,
+      nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+      signature: '<?php echo $signPackage["signature"];?>',
+      jsApiList: [
+          'checkJsApi',
+          'onMenuShareTimeline',
+          'onMenuShareAppMessage',
+          'onMenuShareQQ',
+          'onMenuShareWeibo'
+      ]
+    });
+    
 </script>
 
 ```
