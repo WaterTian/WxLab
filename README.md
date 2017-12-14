@@ -1,6 +1,7 @@
 # WxLab
 
-180LAB 微信授权
+## 180LAB 微信授权
+###  服务器：cdn.180china.com  公众号：180LAB
 
 #### 分享权限 ： 
 实例 http://cdn.180china.com/WxLab/sign.html
