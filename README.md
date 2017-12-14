@@ -5,7 +5,7 @@
 #### 分享权限 ： 
 实例 http://cdn.180china.com/WxLab/sign.html
 
-``` 
+``` javascript
 "http://cdn.180china.com/WxLab/lib/getSignPackage.php?path="+encodeURIComponent(window.location.href);
 
 ```
@@ -13,7 +13,7 @@
 #### 用户信息权限 ： 
 实例 http://cdn.180china.com/WxLab/wxinfo.php
 
-``` 
+``` javascript
 <?php
     $appId     = 'wxb1e083f1652f5616';
     $getWxInfo = "http://cdn.180china.com/WxLab/lib/getWxInfo.php";
